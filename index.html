@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vite + TS</title>
+</head>
+<body>
+<div id="app">
+  <canvas ref="canvas" class="webgl-canvas" data-vue-component-webgl-canvas v-scope="WebglCanvas({i: 1})" @vue:mounted="onMounted()"></canvas>
+  <section class="page-section" data-vue-component-page-section v-scope="PageSection({i: 1})"
+  >
+    <h1>{{title}}</h1>
+  </section>
+  <section class="page-section" data-vue-component-page-section v-scope="PageSection({i: 2})">
+    <h1>{{title}}</h1>
+  </section>
+  <section class="page-section" data-vue-component-page-section v-scope="PageSection({i: 3})">
+    <h1>{{title}}</h1>
+  </section>
+</div>
+
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
