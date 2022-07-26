@@ -15,7 +15,7 @@ function drawCanvas(canvas: HTMLCanvasElement) {
   // variables
   const objectsDistance = 4
   const parameters = {
-    materialColor: '#c7bcbc'
+    materialColor: '#dbeeff'
   }
 
   // textures
@@ -34,9 +34,9 @@ function drawCanvas(canvas: HTMLCanvasElement) {
 
   // objects
   const geometries = [
+    new THREE.DodecahedronGeometry(1, 0),
     new THREE.TorusGeometry(1, 0.4, 16, 60),
-    new THREE.ConeGeometry(1, 2, 32),
-    new THREE.TorusGeometry(0.8, 0.35, 100, 16),
+    new THREE.BoxGeometry(1, 1, 1),
   ]
 
   // elements
@@ -47,7 +47,8 @@ function drawCanvas(canvas: HTMLCanvasElement) {
       material
     ))
     elements[i].scale.set(0.5, 0.5, 0.5)
-    elements[i].position.y = objectsDistance * i * -1
+    elements[i].position.x = i % 2 === 0 ? 1 : -1
+    elements[i].position.y = objectsDistance * i * -1 + 0
     scene.add(elements[i])
   }
   const sectionMeshes = elements.slice(0)

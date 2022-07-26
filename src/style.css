@@ -5,7 +5,7 @@
 
 html,
 body {
-  background: #181618;
+  background: #001528;
   /*overflow: hidden;*/
 }
 
@@ -22,9 +22,8 @@ body {
   align-items: center;
   height: 100vh;
   position: relative;
-  font-family: 'Cabin', sans-serif;
-  color: #ffeded;
-  text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  color: #dbeeff;
   font-size: 7vmin;
   padding-left: 10%;
   padding-right: 10%;
